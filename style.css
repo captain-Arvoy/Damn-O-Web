@@ -1,0 +1,11 @@
+#labelForHolder{
+  padding: 5vw;
+  background-color: beige;
+
+}
+#save{
+  font-family: monospace;
+  font-size: 12pt;
+  border-radius: 8px;
+}
+
