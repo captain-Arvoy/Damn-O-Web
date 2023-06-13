@@ -35,13 +35,12 @@ async function db_connect(){
 }
 
 
-async function main(){
+export async function main(queryArgs){
   await db_connect();
-  const sqlquery = async function(queryArgs){
-    const result = await queryExecute(queryArgs);
-    console.log("successfully execute\n"+result);
-  };
-  sqlquery("desc ARD");
+  console.log(queryArgs);
+  // const queryArgs = "select * from ARD";
+  const result = await queryExecute(queryArgs);
+  console.log("successfully execute\n"+result)
   con.end((error)=>{
     if(error){
       console.log("Error in disconnecting");
@@ -49,8 +48,9 @@ async function main(){
       console.log("connection terminated");
     }
   });  
+  return result;
 }
-(await main());
+// (await main());
 // con.end((error)=>{});
 // const saveButton = document.querySelector("#save");
 // saveButton.addEventListener("click",()=>{
