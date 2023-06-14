@@ -37,8 +37,6 @@ async function db_connect(){
 
 export async function main(queryArgs){
   await db_connect();
-  console.log(queryArgs);
-  // const queryArgs = "select * from ARD";
   const result = await queryExecute(queryArgs);
   console.log("successfully execute\n"+result)
   con.end((error)=>{
