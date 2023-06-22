@@ -3,7 +3,7 @@ services:
   sequeldb:
     image: mysql
     ports:
-      - 27017:27017
+      - 3306:3306
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     volumes:

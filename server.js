@@ -1,21 +1,9 @@
-import http from 'http'
-
-const host = 'localhost';
-const port = 3001;
-
-  const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-  
-  // Write the response content
-    if(req.url == '/'){
-
-      res.end("<h1> PROTOTYPE SERVER BUILT</h1>");
-    } 
-  });
-server.listen(port,()=>{
-  console.log(`listening on  port= ${port}`);
+import express from 'express'
+const app = express()
+let port = 4000;
+app.get("/home",(req,res)=>{
+  res.status(404).send("HOME PAGE")
 })
-
-
-
+app.listen(port,()=>{
+  console.log(`Listening on port ${port} `)
+})

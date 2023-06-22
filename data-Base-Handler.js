@@ -1,6 +1,7 @@
 import mysql from 'mysql2'
 const con = mysql.createConnection({
-  host:'localhost',
+  host:'127.0.0.1',
+  // port: '27017',
   user:'root',
   password:'',
   database:'NotesDB'
@@ -19,7 +20,7 @@ function queryExecute(sqlquery){
     });
   });
 }
-// queryExecute("create table ARD(\
+// queryExecute"create table ARD(\
 //   Sno INT AUTO_INCREMENT PRIMARY KEY,\
 //   noted_at DATE DEFAULT CURRENT_DATE(),\
 //   notes TEXT\
