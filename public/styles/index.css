@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#navBox{
+  background-color: purple;
+  padding: 4vh;
+  border-radius: 0.6em;
+}
+#menuItems{
+  list-style: none;
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  text-align: center;
+}
+#menuItems a{
+  color: whitesmoke;
+}
+#menuItems div:hover{
+  background-color: #800;
+  border-radius: 2rem;
+  transform: translate(4px,5px);
+  transition: 600ms ease-in-out;
+}

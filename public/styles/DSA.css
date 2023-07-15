@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+#menuItemWrapper{
+  display: grid;
+  grid-template-rows:repeat(6,1fr);
+}
+#menuItems a{
+  text-decoration: none;
+  color:#7e1400;
+  font-family: Caprasimo;
+  font-size: 1.6rem;
+}
+#menuItems a:hover{
+  color: aliceblue;
+  font-weight:bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+#menuItemWrapper div{
+  padding: 2vh;
+  border-bottom: 1px solid gray;
+}
+#menuItemWrapper div:hover{
+  border: #dcbf39 2px solid;
+  border-radius: 4px;
+  background-color: black;
+}
