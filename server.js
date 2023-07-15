@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 const port = process.env.PORT || 8000;
 app.use(express.static("public"))
@@ -6,11 +7,11 @@ app.get('/',(req,res)=>{
   res.send("<h1>SERVER IS UP!</h1>")
 })
 app.get('/FWT',(req,res)=>{
-  res.sendFile(__dirname+"/public/FWT.html")
+  res.sendFile(path.join(__dirname,"/public/FWT.html"))
   // res.sendStatus(402)
 })
 app.get('/DSA',(req,res)=>{
-  res.sendFile(__dirname+"/public/DSA.html")
+  res.sendFile(path.join(__dirname+"/public/DSA.html"))
 })
 app.get('/DSA/Dev',(req,res)=>{
   res.send("<h1>You clicked on Developer page</h1>")
